@@ -1,0 +1,14 @@
+<h2>Asistentes</h2>
+<div id="assistants-box" *ngIf="user_profiles">
+	<ul>
+		<li *ngFor="let u of user_profiles">
+			<mat-card class="assistant-card">
+			  <img mat-card-image src="http://wattleparkkgn.sa.edu.au/wp-content/uploads/2017/06/placeholder-profile-sq.jpg" class="profile-img">
+			  <mat-card-content>
+			  	<h3> {{ u.name }}</h3>
+			  </mat-card-content>
+			</mat-card>
+		</li>
+	</ul>
+	
+</div>

@@ -1,0 +1,51 @@
+<p>
+  <i class="far fa-user"></i>
+  Encargado: 
+  <mat-form-field>
+    <mat-select placeholder="Usuario">
+      <mat-option *ngFor="let user of users" [value]="user.email">
+        {{ user.email }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</p>
+
+<p>
+  <i class="far fa-clock"></i>
+  Inicio:
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" (focus)="picker.open()">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  /
+  <i class="far fa-clock"></i>
+  Fin:
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker_end" placeholder="Choose a date" (focus)="picker_end.open()">
+    <mat-datepicker-toggle matSuffix [for]="picker_end"></mat-datepicker-toggle>
+    <mat-datepicker #picker_end></mat-datepicker>
+  </mat-form-field>
+</p>
+
+<hr>
+
+<p>
+  Titulo: 
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field>
+</p>
+<p>
+  Descripción:
+  <mat-form-field  class="text-area">
+    <textarea matInput></textarea>
+  </mat-form-field>
+</p>
+
+
+
+
+
+
+
